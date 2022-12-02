@@ -20,10 +20,10 @@
                 <span *ngIf="product.stock>0">{{product.stock}}</span>
             </td>
             <td> 
-                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" *ngIf="product.stock>0" ></app-input-integer>
+                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" *ngIf="product.stock>0"></app-input-integer>
             </td>
             <td>
-                <button class="btn btn-primary" (click)="addToCart(product)">Comprar</button>
+                <button class="btn btn-primary" *ngIf="product.stock>0" (click)="addToCart(product)">Comprar</button>
             </td>
         </tr>
     </tbody>

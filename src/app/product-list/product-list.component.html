@@ -1,7 +1,7 @@
 <table class="table text-center">
     <thead>
         <tr>
-            <th>Imagen</th>
+            <th></th>
             <th>Nombre</th>
             <th>Tipo</th>
             <th>Precio</th>
@@ -20,7 +20,7 @@
                 <span *ngIf="product.stock>0">{{product.stock}}</span>
             </td>
             <td> 
-                <app-input-integer [product]="product" *ngIf="product.stock>0"></app-input-integer>
+                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" *ngIf="product.stock>0" ></app-input-integer>
             </td>
         </tr>
     </tbody>

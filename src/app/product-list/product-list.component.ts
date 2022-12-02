@@ -43,5 +43,9 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  maxReached(m:String){
+    alert(m);
+  }
+
 
 }
